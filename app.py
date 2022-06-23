@@ -2,6 +2,7 @@ from fawkes.protection import Fawkes
 import gradio as gr
 
 def predict(level, img):
+  print(img)
   fwks = Fawkes("extractor_2", '0', 1, mode=level)
   fwks.run_protection([img], format='jpeg')
   splt = img.split(".")
