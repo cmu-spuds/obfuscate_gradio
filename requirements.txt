@@ -10,7 +10,7 @@ backoff==1.10.0
 bcrypt==3.2.2
 bleach==5.0.0
 cachetools==5.2.0
-certifi @ file:///opt/conda/conda-bld/certifi_1655968806487/work/certifi
+certifi==latest
 cffi==1.15.0
 charset-normalizer==2.0.12
 click==8.1.3
