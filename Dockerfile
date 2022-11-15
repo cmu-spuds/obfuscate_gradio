@@ -18,5 +18,6 @@ RUN apt-get remove -y --purge make gcc build-essential \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
+ADD raccoon_emoji.png /workspace/
 ADD app.py /workspace/
 CMD [ "python" , "/workspace/app.py" ]
