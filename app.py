@@ -2,7 +2,6 @@ import cv2
 import gradio as gr
 import numpy as np
 from mtcnn_cv2 import MTCNN
-import os
 
 detector = MTCNN()
 
@@ -113,4 +112,4 @@ def overlay_transparent(background_img, img_to_overlay_t, x, y, overlay_size=Non
 
 gr.Interface(fn=predict,
              inputs=[gr.components.Image(type='numpy'), gr.components.Radio(["Low", "Medium", "High", "Emoji"], value="Medium")],
-             outputs=gr.components.Image(type="pil")).launch(show_error=True)
+             outputs=gr.components.Image(type="pil"), allow_flagging="never").launch(show_error=True, quiet=False)
